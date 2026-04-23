@@ -57,6 +57,7 @@ class LoginMessage(BSMessageReader):
         elif self.player.low_id != 0:
             LoginOkMessage(self.client, self.player).send()
             DataBase.loadAccount(self) # load account
+            DataBase.update_club_trophies(self)
             OwnHomeDataMessage(self.client, self.player).send()
             try:
                 MyAllianceMessage(self.client, self.player, self.player.club_low_id).send()
@@ -80,4 +81,3 @@ class LoginMessage(BSMessageReader):
             LoginOkMessage(self.client, self.player).send()
             OwnHomeDataMessage(self.client, self.player).send()
             MyAllianceMessage(self.client, self.player, self.player.club_low_id).send()
-            

@@ -30,3 +30,9 @@ class OnPlay(BSMessageReader):
             self.player.map_id = EventSlots.maps[self.MapIndex- 1]['ID']
             DataBase.createGameroomDB(self)
             TeamGameroomDataMessage(self.client, self.player).send()
+
+        # Если Dynamike использует ульту
+        if self.brawler_id == 11:  # ID Dynamike
+            from Packets.Messages.Server.Battle.DynamikeUltiMessage import DynamikeUltiMessage
+            # Отправляем создание клона (координаты можно получить из карты)
+            DynamikeUltiMessage(self.client, self.player, 100, 100).send()

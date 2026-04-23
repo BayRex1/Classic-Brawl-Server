@@ -30,9 +30,6 @@ from Packets.Messages.Client.Alliance.Promote_Alliance_Member_Message import Pro
 from Packets.Messages.Client.Alliance.Leave_Message import Leave_Message
 from Packets.Messages.Client.Alliance.Alliance_Chat_Message import AllianceChatMessage
 from Packets.Messages.Client.Alliance.Edit_Settings_Message import Edit_Settings_Message
-# Join request
-# Accept or decline request
-# Invite member
 from Packets.Messages.Client.Alliance.Search_Message import Search_Message
 from Packets.Messages.Client.Alliance.Send_Club_Mail_Message import SendClubMail
 
@@ -66,17 +63,11 @@ packets = {
     14301: Create_Message,
     14302: AskForAllianceDataMessage,
     14303: Ask_Joinable_Alliances_Message,
-    # 14304: Ask_Stream_Message,
     14305: Join_Message,
     14306: Promote_Alliance_Member_Message,
-    # 14307: Kick_Member_Message,
     14308: Leave_Message,
     14315: AllianceChatMessage,
     14316: Edit_Settings_Message,
-    # 14317: Join_Request_Message,
-    # 14321: Decide_Request_Message,
-    # 14322: Invite_Member_Message,
-    # 14323: Accept_Join_Invite_Message,
     14324: Search_Message,
     14330: SendClubMail,
 
@@ -86,7 +77,6 @@ packets = {
     14363: TeamSetLocationMessage,
     14354: TeamChangeMemberSettingsMessage,
     14362: TeamSetRankedLocationMessage,
-    14363: TeamSetLocationMessage,
     14366: PlayerStatusMessage,
     14372: TeamUseGadgetMessage,
 
